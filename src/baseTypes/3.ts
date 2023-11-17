@@ -12,7 +12,4 @@ function name(some:unknown) {
   return;
 }
 
-// second way
-str = some as string;
-
 export {};

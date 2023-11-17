@@ -19,13 +19,13 @@ export { };
 
 // second way
 
-function GetPromise<T>(): Promise<Array<T>> {
+function GetPromise<T extends [string, number]>(): Promise<T> {
   return new Promise((resolve) => {
-    resolve(['Text', 50] as Array<T>);
+    resolve(['Text', 50] as T);
   });
 }
 
-GetPromise<string | number>()
+GetPromise()
 .then((data) => {
   console.log(data);
 });
